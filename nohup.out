@@ -1,0 +1,101 @@
+Traceback (most recent call last):
+  File "train_simple_class.py", line 11, in <module>
+    import tensorflow as tf
+  File "/home/luochao/anaconda2/lib/python2.7/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import *
+  File "/home/luochao/anaconda2/lib/python2.7/site-packages/tensorflow/python/__init__.py", line 77, in <module>
+    from tensorflow.python.estimator import estimator_lib as estimator
+  File "/home/luochao/anaconda2/lib/python2.7/site-packages/tensorflow/python/estimator/estimator_lib.py", line 32, in <module>
+    from tensorflow.python.estimator.inputs import inputs
+  File "/home/luochao/anaconda2/lib/python2.7/site-packages/tensorflow/python/estimator/inputs/inputs.py", line 22, in <module>
+    from tensorflow.python.estimator.inputs.numpy_io import numpy_input_fn
+  File "/home/luochao/anaconda2/lib/python2.7/site-packages/tensorflow/python/estimator/inputs/numpy_io.py", line 22, in <module>
+    from tensorflow.python.estimator.inputs.queues import feeding_functions
+  File "/home/luochao/anaconda2/lib/python2.7/site-packages/tensorflow/python/estimator/inputs/queues/feeding_functions.py", line 40, in <module>
+    import pandas as pd
+  File "/home/luochao/anaconda2/lib/python2.7/site-packages/pandas/__init__.py", line 40, in <module>
+    import pandas.core.config_init
+  File "/home/luochao/anaconda2/lib/python2.7/site-packages/pandas/core/config_init.py", line 502, in <module>
+    import xlsxwriter  # noqa
+  File "/home/luochao/anaconda2/lib/python2.7/site-packages/xlsxwriter/__init__.py", line 3, in <module>
+    from .workbook import Workbook
+  File "/home/luochao/anaconda2/lib/python2.7/site-packages/xlsxwriter/workbook.py", line 23, in <module>
+    from .worksheet import Worksheet
+  File "/home/luochao/anaconda2/lib/python2.7/site-packages/xlsxwriter/worksheet.py", line 132, in <module>
+    cell_string_tuple = namedtuple('String', 'string, format')
+  File "/home/luochao/anaconda2/lib/python2.7/collections.py", line 386, in namedtuple
+    exec class_definition in namespace
+  File "<string>", line 1, in <module>
+KeyboardInterrupt
+/home/luochao/anaconda2/lib/python2.7/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+2018-10-26 17:12:58.448760: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-10-26 17:12:58.448909: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-10-26 17:12:58.448936: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-10-26 17:12:58.448957: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-10-26 17:12:58.448981: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2018-10-26 17:12:58.809406: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 0 with properties: 
+name: Tesla M40
+major: 5 minor: 2 memoryClockRate (GHz) 1.112
+pciBusID 0000:08:00.0
+Total memory: 11.17GiB
+Free memory: 11.06GiB
+2018-10-26 17:12:58.809475: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 
+2018-10-26 17:12:58.809491: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y 
+2018-10-26 17:12:58.809509: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla M40, pci bus id: 0000:08:00.0)
+start to train ResidualAttentionModel
+load data from pickle Muti heart cut
+build graph...
+('x_First', <bound method Tensor.get_shape of <tf.Tensor 'conv2d/BiasAdd:0' shape=(?, 128, 128, 32) dtype=float32>>)
+('x_module_input.shape', TensorShape([Dimension(None), Dimension(64), Dimension(64), Dimension(128)]))
+check shape of data...
+train_X: (395, 128, 128, 1)
+train_y: (395, 2)
+start to train...
+EPOCH: 0, Training cost: 0.227195262909, Validation cost: 0.351204127073, Validation Accuracy: 0.860759493671 
+EPOCH: 1, Training cost: 0.161728680134, Validation cost: 0.240705654025, Validation Accuracy: 0.911392405063 
+EPOCH: 2, Training cost: 0.13601949811, Validation cost: 0.420539140701, Validation Accuracy: 0.810126582278 
+EPOCH: 3, Training cost: 0.134381398559, Validation cost: 0.153660997748, Validation Accuracy: 0.962025316456 
+EPOCH: 4, Training cost: 0.0866551920772, Validation cost: 0.139062702656, Validation Accuracy: 0.962025316456 
+EPOCH: 5, Training cost: 0.0456521436572, Validation cost: 0.203147530556, Validation Accuracy: 0.898734177215 
+EPOCH: 6, Training cost: 0.0272548627108, Validation cost: 0.13720561564, Validation Accuracy: 0.962025316456 
+EPOCH: 7, Training cost: 0.0430206358433, Validation cost: 0.130034789443, Validation Accuracy: 0.949367088608 
+EPOCH: 8, Training cost: 0.0186250712723, Validation cost: 0.127910897136, Validation Accuracy: 0.974683544304 
+EPOCH: 9, Training cost: 0.00920619256794, Validation cost: 0.110701732337, Validation Accuracy: 0.962025316456 
+EPOCH: 10, Training cost: 0.0158654265106, Validation cost: 0.101977519691, Validation Accuracy: 0.962025316456 
+EPOCH: 11, Training cost: 0.0272762812674, Validation cost: 0.129408955574, Validation Accuracy: 0.962025316456 
+EPOCH: 12, Training cost: 0.00891004130244, Validation cost: 0.0929728373885, Validation Accuracy: 0.974683544304 
+EPOCH: 13, Training cost: 0.010051923804, Validation cost: 0.0890509337187, Validation Accuracy: 0.974683544304 
+EPOCH: 14, Training cost: 0.0124352416024, Validation cost: 0.104127809405, Validation Accuracy: 0.962025316456 
+EPOCH: 15, Training cost: 0.00423571560532, Validation cost: 0.102961599827, Validation Accuracy: 0.962025316456 
+EPOCH: 16, Training cost: 0.00303010782227, Validation cost: 0.0976797714829, Validation Accuracy: 0.962025316456 
+EPOCH: 17, Training cost: 0.00131280778442, Validation cost: 0.0906672924757, Validation Accuracy: 0.974683544304 
+EPOCH: 18, Training cost: 0.000993988011032, Validation cost: 0.0925228819251, Validation Accuracy: 0.962025316456 
+EPOCH: 19, Training cost: 0.00108272524085, Validation cost: 0.0923903807998, Validation Accuracy: 0.974683544304 
+EPOCH: 20, Training cost: 0.00269113504328, Validation cost: 0.100697219372, Validation Accuracy: 0.949367088608 
+EPOCH: 21, Training cost: 0.000987761071883, Validation cost: 0.10230255127, Validation Accuracy: 0.949367088608 
+EPOCH: 22, Training cost: 0.000848744413815, Validation cost: 0.103377260268, Validation Accuracy: 0.949367088608 
+EPOCH: 23, Training cost: 0.00069314747816, Validation cost: 0.0984933674335, Validation Accuracy: 0.962025316456 
+EPOCH: 24, Training cost: 0.000561679247767, Validation cost: 0.0984756499529, Validation Accuracy: 0.949367088608 
+EPOCH: 25, Training cost: 0.00121181621216, Validation cost: 0.11887101084, Validation Accuracy: 0.949367088608 
+EPOCH: 26, Training cost: 0.000749631901272, Validation cost: 0.0939368754625, Validation Accuracy: 0.962025316456 
+EPOCH: 27, Training cost: 0.000505281146616, Validation cost: 0.0937906429172, Validation Accuracy: 0.974683544304 
+EPOCH: 28, Training cost: 0.000540917157196, Validation cost: 0.0984825715423, Validation Accuracy: 0.949367088608 
+EPOCH: 29, Training cost: 0.000545738439541, Validation cost: 0.0939616411924, Validation Accuracy: 0.949367088608 
+EPOCH: 30, Training cost: 0.00152734247968, Validation cost: 0.287141978741, Validation Accuracy: 0.886075949367 
+EPOCH: 31, Training cost: 0.00332382670604, Validation cost: 0.132061094046, Validation Accuracy: 0.962025316456 
+EPOCH: 32, Training cost: 0.00314892572351, Validation cost: 0.0998088940978, Validation Accuracy: 0.962025316456 
+EPOCH: 33, Training cost: 0.000756760418881, Validation cost: 0.0983865633607, Validation Accuracy: 0.949367088608 
+EPOCH: 34, Training cost: 0.000555389269721, Validation cost: 0.0893052071333, Validation Accuracy: 0.987341772152 
+EPOCH: 35, Training cost: 0.00066848663846, Validation cost: 0.0933333337307, Validation Accuracy: 0.974683544304 
+EPOCH: 36, Training cost: 0.000213697028812, Validation cost: 0.0945284441113, Validation Accuracy: 0.962025316456 
+EPOCH: 37, Training cost: 0.000175092645804, Validation cost: 0.0916905254126, Validation Accuracy: 0.962025316456 
+EPOCH: 38, Training cost: 0.000206742202863, Validation cost: 0.0933325067163, Validation Accuracy: 0.962025316456 
+EPOCH: 39, Training cost: 0.000496792374179, Validation cost: 0.121707744896, Validation Accuracy: 0.949367088608 
+EPOCH: 40, Training cost: 0.000729986757506, Validation cost: 0.0951052010059, Validation Accuracy: 0.974683544304 
+EPOCH: 41, Training cost: 0.000115064278361, Validation cost: 0.0933665931225, Validation Accuracy: 0.974683544304 
+EPOCH: 42, Training cost: 0.000121250028315, Validation cost: 0.0930656865239, Validation Accuracy: 0.974683544304 
+EPOCH: 43, Training cost: 9.3391383416e-05, Validation cost: 0.0927637666464, Validation Accuracy: 0.974683544304 
+EPOCH: 44, Training cost: 0.000109746346425, Validation cost: 0.0928756520152, Validation Accuracy: 0.974683544304 
+save model...
